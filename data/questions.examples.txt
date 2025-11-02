@@ -1,0 +1,235 @@
+# Eveluo Assessment Questions
+# Format: YAML-like structure for easy editing
+# Supports UTF-8 encoding for Chinese characters
+
+test_name: "基础 DevOps 测试"
+test_description: "检测简单云后台及Docker操作"
+
+questions:
+  - id: 1
+    text: "实验：请要求监考官协助你登陆到腾讯云后台。由考生基于一个已有实例创建一个自定义镜像，再基于该镜像创建一个新实例。由监考官回答以下问题："
+    type: "SINGLE_CHOICE"
+    score: 5
+    options:
+      - text: "完成正确"
+        correct: true
+      - text: "未完成/完成不正确"
+        correct: false
+
+  - id: 2
+    text: "什么是Docker？"
+    type: "SINGLE_CHOICE"
+    score: 1
+    options:
+      - text: "一个虚拟机管理工具"
+        correct: false
+      - text: "一个容器化平台"
+        correct: true
+      - text: "一个代码版本控制系统"
+        correct: false
+      - text: "一个数据库管理系统"
+        correct: false
+
+  - id: 3
+    text: "以下哪些是Docker的核心概念？（多选）"
+    type: "MULTIPLE_CHOICE"
+    score: 1
+    options:
+      - text: "镜像 (Image)"
+        correct: true
+      - text: "容器 (Container)"
+        correct: true
+      - text: "仓库 (Repository)"
+        correct: true
+      - text: "虚拟机 (Virtual Machine)"
+        correct: false
+      - text: "Dockerfile"
+        correct: true
+
+  - id: 4
+    text: "运行Docker容器的基本命令是什么？"
+    type: "SINGLE_CHOICE"
+    score: 1
+    options:
+      - text: "docker start"
+        correct: false
+      - text: "docker run"
+        correct: true
+      - text: "docker create"
+        correct: false
+      - text: "docker exec"
+        correct: false
+
+  - id: 5
+    text: "以下哪些Docker命令用于管理镜像？（多选）"
+    type: "MULTIPLE_CHOICE"
+    score: 1
+    options:
+      - text: "docker pull"
+        correct: true
+      - text: "docker build"
+        correct: true
+      - text: "docker images"
+        correct: true
+      - text: "docker ps"
+        correct: false
+      - text: "docker rmi"
+        correct: true
+
+  - id: 6
+    text: "Dockerfile中的FROM指令的作用是什么？"
+    type: "SINGLE_CHOICE"
+    score: 1
+    options:
+      - text: "指定工作目录"
+        correct: false
+      - text: "指定基础镜像"
+        correct: true
+      - text: "复制文件"
+        correct: false
+      - text: "设置环境变量"
+        correct: false
+
+  - id: 7
+    text: "以下哪些是Dockerfile中的有效指令？（多选）"
+    type: "MULTIPLE_CHOICE"
+    score: 1
+    options:
+      - text: "RUN"
+        correct: true
+      - text: "COPY"
+        correct: true
+      - text: "EXPOSE"
+        correct: true
+      - text: "INSTALL"
+        correct: false
+      - text: "WORKDIR"
+        correct: true
+
+  - id: 8
+    text: "Docker容器和虚拟机的主要区别是什么？"
+    type: "SINGLE_CHOICE"
+    score: 1
+    options:
+      - text: "容器共享主机操作系统内核，虚拟机有独立的操作系统"
+        correct: true
+      - text: "容器比虚拟机占用更多资源"
+        correct: false
+      - text: "虚拟机启动更快"
+        correct: false
+      - text: "容器不能运行在Linux上"
+        correct: false
+
+  - id: 9
+    text: "什么是Docker Compose？"
+    type: "SINGLE_CHOICE"
+    score: 1
+    options:
+      - text: "Docker的图形界面工具"
+        correct: false
+      - text: "用于定义和运行多容器Docker应用的工具"
+        correct: true
+      - text: "Docker的网络管理工具"
+        correct: false
+      - text: "Docker的存储管理工具"
+        correct: false
+
+  - id: 10
+    text: "Docker Compose的配置文件通常使用什么格式？"
+    type: "SINGLE_CHOICE"
+    score: 1
+    options:
+      - text: "JSON"
+        correct: false
+      - text: "XML"
+        correct: false
+      - text: "YAML"
+        correct: true
+      - text: "INI"
+        correct: false
+
+  - id: 11
+    text: "以下哪些是Docker Compose的常用命令？（多选）"
+    type: "MULTIPLE_CHOICE"
+    score: 1
+    options:
+      - text: "docker-compose up"
+        correct: true
+      - text: "docker-compose down"
+        correct: true
+      - text: "docker-compose build"
+        correct: true
+      - text: "docker-compose install"
+        correct: false
+      - text: "docker-compose logs"
+        correct: true
+
+  - id: 12
+    text: "在docker-compose.yml文件中，services部分的作用是什么？"
+    type: "SINGLE_CHOICE"
+    score: 1
+    options:
+      - text: "定义网络配置"
+        correct: false
+      - text: "定义存储卷配置"
+        correct: false
+      - text: "定义各个容器服务"
+        correct: true
+      - text: "定义环境变量"
+        correct: false
+
+  - id: 13
+    text: "Docker数据持久化可以通过以下哪些方式实现？（多选）"
+    type: "MULTIPLE_CHOICE"
+    score: 1
+    options:
+      - text: "数据卷 (Volumes)"
+        correct: true
+      - text: "绑定挂载 (Bind Mounts)"
+        correct: true
+      - text: "tmpfs挂载"
+        correct: true
+      - text: "容器内存储"
+        correct: false
+
+  - id: 14
+    text: "以下哪个命令可以查看正在运行的Docker容器？"
+    type: "SINGLE_CHOICE"
+    score: 1
+    options:
+      - text: "docker images"
+        correct: false
+      - text: "docker ps"
+        correct: true
+      - text: "docker ls"
+        correct: false
+      - text: "docker list"
+        correct: false
+
+  - id: 15
+    text: "Docker网络的默认类型是什么？"
+    type: "SINGLE_CHOICE"
+    score: 1
+    options:
+      - text: "host"
+        correct: false
+      - text: "bridge"
+        correct: true
+      - text: "none"
+        correct: false
+      - text: "overlay"
+        correct: false
+
+  - id: 16
+    text: "在Docker Compose中，如何指定服务之间的依赖关系？"
+    type: "SINGLE_CHOICE"
+    score: 1
+    options:
+      - text: "使用links"
+        correct: false
+      - text: "使用depends_on"
+        correct: true
+      - text: "使用networks"
+        correct: false
+      - text: "使用volumes"
+        correct: false

@@ -3,217 +3,273 @@ import { TestData } from '@/types'
 
 export const testData: TestData = {
   id: 1,
-  name: "基础 DevOps 测试",
-  description: "检测简单云后台及Docker操作",
+  name: "XPath Knowledge Assessment",
+  description: "Evaluating XPath concepts, HTML element location, and Playwright integration",
   questions: [
     {
       id: 1,
-      text: "实验：请要求监考官协助你登陆到腾讯云后台。由考生基于一个已有实例创建一个自定义镜像，再基于该镜像创建一个新实例。由监考官回答以下问题：",
+      text: "What does XPath stand for?",
       type: "SINGLE_CHOICE",
       order: 1,
-      score: 5,
+      score: 1,
       options: [
-        { id: 1, text: "完成正确", isCorrect: true, order: 1 },
-        { id: 2, text: "未完成/完成不正确", isCorrect: false, order: 2 }
+        { id: 1, text: "XML Path Language", isCorrect: true, order: 1 },
+        { id: 2, text: "External Path Language", isCorrect: false, order: 2 },
+        { id: 3, text: "Extensible Path Locator", isCorrect: false, order: 3 },
+        { id: 4, text: "XML Programming Language", isCorrect: false, order: 4 }
       ]
     },
     {
       id: 2,
-      text: "什么是Docker？",
+      text: "Which XPath expression selects all div elements in the document?",
       type: "SINGLE_CHOICE",
       order: 2,
       score: 1,
       options: [
-        { id: 3, text: "一个虚拟机管理工具", isCorrect: false, order: 1 },
-        { id: 4, text: "一个容器化平台", isCorrect: true, order: 2 },
-        { id: 5, text: "一个代码版本控制系统", isCorrect: false, order: 3 },
-        { id: 6, text: "一个数据库管理系统", isCorrect: false, order: 4 }
+        { id: 5, text: "//div", isCorrect: true, order: 1 },
+        { id: 6, text: "/div", isCorrect: false, order: 2 },
+        { id: 7, text: "//div[*]", isCorrect: false, order: 3 },
+        { id: 8, text: "./div", isCorrect: false, order: 4 }
       ]
     },
     {
       id: 3,
-      text: "以下哪些是Docker的核心概念？（多选）",
+      text: "Which of the following are valid XPath axes? (Multiple Choice)",
       type: "MULTIPLE_CHOICE",
       order: 3,
       score: 1,
       options: [
-        { id: 7, text: "镜像 (Image)", isCorrect: true, order: 1 },
-        { id: 8, text: "容器 (Container)", isCorrect: true, order: 2 },
-        { id: 9, text: "仓库 (Repository)", isCorrect: true, order: 3 },
-        { id: 10, text: "虚拟机 (Virtual Machine)", isCorrect: false, order: 4 },
-        { id: 11, text: "Dockerfile", isCorrect: true, order: 5 }
+        { id: 9, text: "child", isCorrect: true, order: 1 },
+        { id: 10, text: "parent", isCorrect: true, order: 2 },
+        { id: 11, text: "ancestor", isCorrect: true, order: 3 },
+        { id: 12, text: "sibling", isCorrect: false, order: 4 },
+        { id: 13, text: "following-sibling", isCorrect: true, order: 5 }
       ]
     },
     {
       id: 4,
-      text: "运行Docker容器的基本命令是什么？",
+      text: "What is the correct XPath to select an element with id='submit-btn'?",
       type: "SINGLE_CHOICE",
       order: 4,
       score: 1,
       options: [
-        { id: 12, text: "docker start", isCorrect: false, order: 1 },
-        { id: 13, text: "docker run", isCorrect: true, order: 2 },
-        { id: 14, text: "docker create", isCorrect: false, order: 3 },
-        { id: 15, text: "docker exec", isCorrect: false, order: 4 }
+        { id: 14, text: "//*[@id='submit-btn']", isCorrect: true, order: 1 },
+        { id: 15, text: "//[@id='submit-btn']", isCorrect: false, order: 2 },
+        { id: 16, text: "//*[id='submit-btn']", isCorrect: false, order: 3 },
+        { id: 17, text: "//id='submit-btn'", isCorrect: false, order: 4 }
       ]
     },
     {
       id: 5,
-      text: "以下哪些Docker命令用于管理镜像？（多选）",
-      type: "MULTIPLE_CHOICE",
+      text: "How do you select an element with class name 'error-message' using XPath?",
+      type: "SINGLE_CHOICE",
       order: 5,
       score: 1,
       options: [
-        { id: 16, text: "docker pull", isCorrect: true, order: 1 },
-        { id: 17, text: "docker build", isCorrect: true, order: 2 },
-        { id: 18, text: "docker images", isCorrect: true, order: 3 },
-        { id: 19, text: "docker ps", isCorrect: false, order: 4 },
-        { id: 20, text: "docker rmi", isCorrect: true, order: 5 }
+        { id: 18, text: "//*[@class='error-message']", isCorrect: true, order: 1 },
+        { id: 19, text: "//class='error-message'", isCorrect: false, order: 2 },
+        { id: 20, text: "//*[class='error-message']", isCorrect: false, order: 3 },
+        { id: 21, text: "//error-message", isCorrect: false, order: 4 }
       ]
     },
     {
       id: 6,
-      text: "Dockerfile中的FROM指令的作用是什么？",
-      type: "SINGLE_CHOICE",
+      text: "Which XPath functions can be used to locate elements by text? (Multiple Choice)",
+      type: "MULTIPLE_CHOICE",
       order: 6,
       score: 1,
       options: [
-        { id: 21, text: "指定工作目录", isCorrect: false, order: 1 },
-        { id: 22, text: "指定基础镜像", isCorrect: true, order: 2 },
-        { id: 23, text: "复制文件", isCorrect: false, order: 3 },
-        { id: 24, text: "设置环境变量", isCorrect: false, order: 4 }
+        { id: 22, text: "text()", isCorrect: true, order: 1 },
+        { id: 23, text: "contains()", isCorrect: true, order: 2 },
+        { id: 24, text: "normalize-space()", isCorrect: true, order: 3 },
+        { id: 25, text: "get-text()", isCorrect: false, order: 4 },
+        { id: 26, text: "starts-with()", isCorrect: true, order: 5 }
       ]
     },
     {
       id: 7,
-      text: "以下哪些是Dockerfile中的有效指令？（多选）",
-      type: "MULTIPLE_CHOICE",
+      text: "What does the XPath expression '//button[1]' select?",
+      type: "SINGLE_CHOICE",
       order: 7,
       score: 1,
       options: [
-        { id: 25, text: "RUN", isCorrect: true, order: 1 },
-        { id: 26, text: "COPY", isCorrect: true, order: 2 },
-        { id: 27, text: "EXPOSE", isCorrect: true, order: 3 },
-        { id: 28, text: "INSTALL", isCorrect: false, order: 4 },
-        { id: 29, text: "WORKDIR", isCorrect: true, order: 5 }
+        { id: 27, text: "The first button element in each parent context", isCorrect: true, order: 1 },
+        { id: 28, text: "All button elements in the document", isCorrect: false, order: 2 },
+        { id: 29, text: "Only the first button in the entire document", isCorrect: false, order: 3 },
+        { id: 30, text: "The button with id='1'", isCorrect: false, order: 4 }
       ]
     },
     {
       id: 8,
-      text: "Docker容器和虚拟机的主要区别是什么？",
+      text: "Which XPath expression selects all anchor tags with an href attribute?",
       type: "SINGLE_CHOICE",
       order: 8,
       score: 1,
       options: [
-        { id: 30, text: "容器共享主机操作系统内核，虚拟机有独立的操作系统", isCorrect: true, order: 1 },
-        { id: 31, text: "容器比虚拟机占用更多资源", isCorrect: false, order: 2 },
-        { id: 32, text: "虚拟机启动更快", isCorrect: false, order: 3 },
-        { id: 33, text: "容器不能运行在Linux上", isCorrect: false, order: 4 }
+        { id: 31, text: "//a[@href]", isCorrect: true, order: 1 },
+        { id: 32, text: "//a[href]", isCorrect: false, order: 2 },
+        { id: 33, text: "//a/href", isCorrect: false, order: 3 },
+        { id: 34, text: "//a[@href='*']", isCorrect: false, order: 4 }
       ]
     },
     {
       id: 9,
-      text: "什么是Docker Compose？",
-      type: "SINGLE_CHOICE",
+      text: "Given nested structure: <div><ul><li><span>Item</span></li></ul></div>, which XPath selects the span inside the third li? (Multiple Choice)",
+      type: "MULTIPLE_CHOICE",
       order: 9,
-      score: 1,
+      score: 2,
       options: [
-        { id: 34, text: "Docker的图形界面工具", isCorrect: false, order: 1 },
-        { id: 35, text: "用于定义和运行多容器Docker应用的工具", isCorrect: true, order: 2 },
-        { id: 36, text: "Docker的网络管理工具", isCorrect: false, order: 3 },
-        { id: 37, text: "Docker的存储管理工具", isCorrect: false, order: 4 }
+        { id: 35, text: "//div/ul/li[3]/span", isCorrect: true, order: 1 },
+        { id: 36, text: "//div/ul/li/span[3]", isCorrect: false, order: 2 },
+        { id: 37, text: "//span[3]", isCorrect: false, order: 3 },
+        { id: 38, text: "//li[3]//span", isCorrect: true, order: 4 }
       ]
     },
     {
       id: 10,
-      text: "Docker Compose的配置文件通常使用什么格式？",
+      text: "How do you select all visible elements with class 'item' (not hidden by CSS)?",
       type: "SINGLE_CHOICE",
       order: 10,
-      score: 1,
+      score: 2,
       options: [
-        { id: 38, text: "JSON", isCorrect: false, order: 1 },
-        { id: 39, text: "XML", isCorrect: false, order: 2 },
-        { id: 40, text: "YAML", isCorrect: true, order: 3 },
-        { id: 41, text: "INI", isCorrect: false, order: 4 }
+        { id: 39, text: "//*[@class='item' and not(contains(@style, 'display:none') or contains(@style, 'display: none'))]", isCorrect: true, order: 1 },
+        { id: 40, text: "//*[@class='item' and @visible='true']", isCorrect: false, order: 2 },
+        { id: 41, text: "//*[@class='item'][@visible]", isCorrect: false, order: 3 },
+        { id: 42, text: "//*[@class='item' and @style!='display:none']", isCorrect: false, order: 4 }
       ]
     },
     {
       id: 11,
-      text: "以下哪些是Docker Compose的常用命令？（多选）",
+      text: "Which XPath techniques can help locate elements with dynamic or partial class names? (Multiple Choice)",
       type: "MULTIPLE_CHOICE",
       order: 11,
-      score: 1,
+      score: 2,
       options: [
-        { id: 42, text: "docker-compose up", isCorrect: true, order: 1 },
-        { id: 43, text: "docker-compose down", isCorrect: true, order: 2 },
-        { id: 44, text: "docker-compose build", isCorrect: true, order: 3 },
-        { id: 45, text: "docker-compose install", isCorrect: false, order: 4 },
-        { id: 46, text: "docker-compose logs", isCorrect: true, order: 5 }
+        { id: 43, text: "contains(@class, 'partial-name')", isCorrect: true, order: 1 },
+        { id: 44, text: "starts-with(@class, 'prefix')", isCorrect: true, order: 2 },
+        { id: 45, text: "ends-with(@class, 'suffix')", isCorrect: true, order: 3 },
+        { id: 46, text: "@class='*partial*'", isCorrect: false, order: 4 },
+        { id: 47, text: "matches(@class, 'pattern')", isCorrect: false, order: 5 }
       ]
     },
     {
       id: 12,
-      text: "在docker-compose.yml文件中，services部分的作用是什么？",
-      type: "SINGLE_CHOICE",
+      text: "For HTML: <table><tr><td>A</td><td>B</td></tr><tr><td>C</td><td>D</td></tr></table>, which XPath selects 'D'? (Multiple Choice)",
+      type: "MULTIPLE_CHOICE",
       order: 12,
-      score: 1,
+      score: 2,
       options: [
-        { id: 47, text: "定义网络配置", isCorrect: false, order: 1 },
-        { id: 48, text: "定义存储卷配置", isCorrect: false, order: 2 },
-        { id: 49, text: "定义各个容器服务", isCorrect: true, order: 3 },
-        { id: 50, text: "定义环境变量", isCorrect: false, order: 4 }
+        { id: 48, text: "//table/tr[2]/td[2]", isCorrect: true, order: 1 },
+        { id: 49, text: "//table/tr/td[4]", isCorrect: false, order: 2 },
+        { id: 50, text: "//td[text()='D']", isCorrect: true, order: 3 },
+        { id: 51, text: "//table//td[last()]", isCorrect: false, order: 4 }
       ]
     },
     {
       id: 13,
-      text: "Docker数据持久化可以通过以下哪些方式实现？（多选）",
-      type: "MULTIPLE_CHOICE",
+      text: "How do you select an element that contains specific text but also has nested elements? Example: <div>Hello <span>World</span></div>",
+      type: "SINGLE_CHOICE",
       order: 13,
-      score: 1,
+      score: 2,
       options: [
-        { id: 51, text: "数据卷 (Volumes)", isCorrect: true, order: 1 },
-        { id: 52, text: "绑定挂载 (Bind Mounts)", isCorrect: true, order: 2 },
-        { id: 53, text: "tmpfs挂载", isCorrect: true, order: 3 },
-        { id: 54, text: "容器内存储", isCorrect: false, order: 4 }
+        { id: 52, text: "//div[contains(., 'Hello') and contains(., 'World')]", isCorrect: true, order: 1 },
+        { id: 53, text: "//div[text()='Hello World']", isCorrect: false, order: 2 },
+        { id: 54, text: "//div[contains(text(), 'Hello World')]", isCorrect: false, order: 3 },
+        { id: 55, text: "//div[.='Hello World']", isCorrect: false, order: 4 }
       ]
     },
     {
       id: 14,
-      text: "以下哪个命令可以查看正在运行的Docker容器？",
-      type: "SINGLE_CHOICE",
+      text: "Which XPath approaches can select the parent of a known element? (Multiple Choice)",
+      type: "MULTIPLE_CHOICE",
       order: 14,
-      score: 1,
+      score: 2,
       options: [
-        { id: 55, text: "docker images", isCorrect: false, order: 1 },
-        { id: 56, text: "docker ps", isCorrect: true, order: 2 },
-        { id: 57, text: "docker ls", isCorrect: false, order: 3 },
-        { id: 58, text: "docker list", isCorrect: false, order: 4 }
+        { id: 56, text: "//span[@id='child']/..", isCorrect: true, order: 1 },
+        { id: 57, text: "//span[@id='child']/parent::*", isCorrect: true, order: 2 },
+        { id: 58, text: "//span[@id='child']/ancestor::*[1]", isCorrect: true, order: 3 },
+        { id: 59, text: "//span[@id='child']/up", isCorrect: false, order: 4 },
+        { id: 60, text: "parent(//span[@id='child'])", isCorrect: false, order: 5 }
       ]
     },
     {
       id: 15,
-      text: "Docker网络的默认类型是什么？",
+      text: "For HTML with multiple elements having the same class, how do you select the last one?",
       type: "SINGLE_CHOICE",
       order: 15,
-      score: 1,
+      score: 2,
       options: [
-        { id: 59, text: "host", isCorrect: false, order: 1 },
-        { id: 60, text: "bridge", isCorrect: true, order: 2 },
-        { id: 61, text: "none", isCorrect: false, order: 3 },
-        { id: 62, text: "overlay", isCorrect: false, order: 4 }
+        { id: 61, text: "(//div[@class='item'])[last()]", isCorrect: true, order: 1 },
+        { id: 62, text: "//div[@class='item'][last()]", isCorrect: false, order: 2 },
+        { id: 63, text: "//div[@class='item' and position()=last()]", isCorrect: false, order: 3 },
+        { id: 64, text: "//div[@class='item'][-1]", isCorrect: false, order: 4 }
       ]
     },
     {
       id: 16,
-      text: "在Docker Compose中，如何指定服务之间的依赖关系？",
+      text: "How can you locate a button by its text content 'Submit' regardless of extra whitespace?",
       type: "SINGLE_CHOICE",
       order: 16,
-      score: 1,
+      score: 2,
       options: [
-        { id: 63, text: "使用links", isCorrect: false, order: 1 },
-        { id: 64, text: "使用depends_on", isCorrect: true, order: 2 },
-        { id: 65, text: "使用networks", isCorrect: false, order: 3 },
-        { id: 66, text: "使用volumes", isCorrect: false, order: 4 }
+        { id: 65, text: "//button[normalize-space(text())='Submit']", isCorrect: true, order: 1 },
+        { id: 66, text: "//button[text()='Submit']", isCorrect: false, order: 2 },
+        { id: 67, text: "//button[trim(text())='Submit']", isCorrect: false, order: 3 },
+        { id: 68, text: "//button[contains(text(), 'Submit')]", isCorrect: false, order: 4 }
+      ]
+    },
+    {
+      id: 17,
+      text: "In Playwright, which methods can be used to wait for an element located by XPath before interacting with it? (Multiple Choice)",
+      type: "MULTIPLE_CHOICE",
+      order: 17,
+      score: 3,
+      options: [
+        { id: 69, text: "page.waitForSelector('xpath=//button[@id=\submit\]')", isCorrect: true, order: 1 },
+        { id: 70, text: "page.locator('xpath=//button[@id=\submit\]').waitFor()", isCorrect: true, order: 2 },
+        { id: 71, text: "page.waitForXPath('//button[@id=\submit\]')", isCorrect: false, order: 3 },
+        { id: 72, text: "page.locator('//button[@id=\submit\]').waitFor({ state: 'visible' })", isCorrect: true, order: 4 },
+        { id: 73, text: "page.wait_for_element('xpath=//button[@id=\submit\]')", isCorrect: false, order: 5 }
+      ]
+    },
+    {
+      id: 18,
+      text: "How do you locate an element inside an iframe using Playwright and XPath?",
+      type: "SINGLE_CHOICE",
+      order: 18,
+      score: 3,
+      options: [
+        { id: 74, text: "const frame = page.frame({ name: 'frameName' }); await frame.locator('//input[@id=\field\]').click();", isCorrect: true, order: 1 },
+        { id: 75, text: "await page.locator('//iframe[@name=\frameName\]//input[@id=\field\]').click();", isCorrect: false, order: 2 },
+        { id: 76, text: "await page.locator('xpath=//iframe//input[@id=\field\]').click();", isCorrect: false, order: 3 },
+        { id: 77, text: "await page.switchFrame('frameName').locator('//input[@id=\field\]').click();", isCorrect: false, order: 4 }
+      ]
+    },
+    {
+      id: 19,
+      text: "In Playwright, which wait strategies should you use when dealing with nested elements inside iframes that load dynamically? (Multiple Choice)",
+      type: "MULTIPLE_CHOICE",
+      order: 19,
+      score: 3,
+      options: [
+        { id: 78, text: "Wait for the iframe to be attached: page.frameLocator('iframe').waitFor()", isCorrect: false, order: 1 },
+        { id: 79, text: "Wait for the specific element inside iframe: page.frameLocator('iframe').locator('//div').waitFor()", isCorrect: true, order: 2 },
+        { id: 80, text: "Use waitForLoadState on the frame: frame.waitForLoadState('domcontentloaded')", isCorrect: true, order: 3 },
+        { id: 81, text: "Chain locators with automatic waiting: page.frameLocator('iframe').locator('//div').click()", isCorrect: true, order: 4 },
+        { id: 82, text: "Use page.waitForTimeout() with fixed delay", isCorrect: false, order: 5 }
+      ]
+    },
+    {
+      id: 20,
+      text: "Given nested iframes: <iframe id='outer'><iframe id='inner'><div class='target'>Text</div></iframe></iframe>, what is the correct Playwright code to interact with the target div?",
+      type: "SINGLE_CHOICE",
+      order: 20,
+      score: 3,
+      options: [
+        { id: 83, text: "await page.frameLocator('#outer').frameLocator('#inner').locator('//div[@class=\target\]').click();", isCorrect: true, order: 1 },
+        { id: 84, text: "await page.locator('xpath=//iframe[@id=\outer\]//iframe[@id=\inner\]//div[@class=\target\]').click();", isCorrect: false, order: 2 },
+        { id: 85, text: "const frame = page.frame({ selector: '#outer' }).frame({ selector: '#inner' }); await frame.locator('//div[@class=\target\]').click();", isCorrect: false, order: 3 },
+        { id: 86, text: "await page.frameLocator('xpath=//iframe[@id=\outer\]//iframe[@id=\inner\]').locator('//div[@class=\target\]').click();", isCorrect: false, order: 4 }
       ]
     }
   ]
